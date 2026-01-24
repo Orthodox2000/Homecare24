@@ -1,0 +1,350 @@
+/* =========================
+   GLOBAL BASE
+========================= */
+
+body {
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #374151;
+}
+
+/* =========================
+   NAV LINKS (DESKTOP)
+========================= */
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;      /* tight: no space hogging */
+  line-height: 1;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #2F7D64;
+}
+
+/* subtle underline indicator */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #2F7D64;
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   MOBILE NAV LINKS
+========================= */
+
+.mobile-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.2;
+}
+
+.mobile-link:hover {
+  color: #2F7D64;
+}
+
+/* =========================
+   PRIMARY / SECONDARY BUTTONS
+========================= */
+
+.primary-btn {
+  background: #2F7D64;
+  color: #ffffff;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #256B55;
+}
+
+.secondary-btn {
+  border: 1px solid #2F7D64;
+  color: #2F7D64;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: rgba(47, 125, 100, 0.08);
+}
+
+/* =========================
+   DESKTOP CONTACT BUTTONS
+========================= */
+
+.contact-btn {
+  padding: 0.7rem 1.5rem;        /* larger feel on PC */
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.email-btn {
+  border: 1px solid #2F7D64;
+  color: #2F7D64;
+}
+
+.email-btn:hover {
+  background: #2F7D64;
+  color: #ffffff;
+}
+
+.whatsapp-btn {
+  background: #2F7D64;
+  color: #ffffff;
+}
+
+.whatsapp-btn:hover {
+  background: #256B55;
+}
+
+/* =========================
+   MOBILE ICON BUTTONS
+========================= */
+
+.icon-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 125, 100, 0.1);
+  font-size: 0.95rem;
+  color: #2F7D64;
+  transition: background 0.2s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(47, 125, 100, 0.18);
+}
+
+/* =========================
+   DESKTOP-SPECIFIC TUNING
+========================= */
+
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+}
+/* =========================
+   SHINE / SILVER HOVER EFFECT
+========================= */
+
+.shine-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transition: left 0.6s ease;
+}
+
+.shine-card:hover::before {
+  left: 120%;
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-info {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2F7D64;
+  margin-bottom: 0.25rem;
+}
+.contact-info:hover{
+  background-color: #2cb88b;
+  
+}
+.contact-info:hover h4{
+    color: white;
+  }
+
+.contact-info p {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+.contact-info:hover p {
+  color: white;
+}
+
+.contact-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Inputs */
+.contact-input {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #2F7D64;
+  box-shadow: 0 0 0 2px rgba(47, 125, 100, 0.12);
+}
+/* carousel*/
+/* Carousel */
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Service Card */
+.service-card {
+  min-width: 260px;
+  max-width: 260px;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.service-card h3 {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2F7D64;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  padding: 0 1rem;
+}
+
+/* Silver Shimmer Effect */
+.shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.shimmer:hover::after {
+  left: 120%;
+}
+
+/* Pause on hover (desktop UX) */
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+/*hero carousel*/
+.collection-carousel {
+  width: 100%;
+  height: 30vh;
+  min-height: 280px;
+  overflow: hidden;
+  position: relative;
+  background: #eef6f4;
+}
+
+.collection-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.9s ease-in-out;
+}
+
+.collection-slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+.collection-slide img {
+  width: 100%; 
+  object-fit: cover;
+} 
