@@ -11,20 +11,7 @@ body {
    NAV LINKS (DESKTOP)
 ========================= */
 
-.nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #374151;      /* tight: no space hogging */
-  line-height: 1;
-  white-space: nowrap;
-  position: relative;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: #2F7D64;
-}
-
+ 
 /* subtle underline indicator */
 .nav-link::after {
   content: "";
@@ -33,7 +20,7 @@ body {
   bottom: -6px;
   width: 0;
   height: 2px;
-  background: #2F7D64;
+  background: #ffffff;
   transform: translateX(-50%);
   transition: width 0.25s ease;
 }
@@ -52,41 +39,88 @@ body {
   color: #374151;
   line-height: 1.2;
 }
-
-.mobile-link:hover {
-  color: #2F7D64;
-}
+ 
 
 /* =========================
-   PRIMARY / SECONDARY BUTTONS
+  faq
 ========================= */
-
-.primary-btn {
-  background: #2F7D64;
-  color: #ffffff;
-  padding: 0.75rem 1.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  transition: background 0.2s ease;
+ .faq-section {
+  padding: 80px 20px;
+  background: #ffffff;
 }
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-title {
+  font-size: 1.8rem;
+  color: #0c2d5a;
+  margin-bottom: 32px;
+}
+
+/* Item */
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Question */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question span:first-child {
+  font-size: 1rem;
+  color: #111827;
+}
+
+.faq-question .icon {
+  font-size: 1.4rem;
+  transition: transform 0.3s ease;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+}
+
+.faq-answer p {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.6;
+  padding-bottom: 18px;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+  max-height: 500px; /* safe height for long answers */
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .faq-title {
+    font-size: 1.5rem;
+  }
+}
+
 
 .primary-btn:hover {
   background: #256B55;
 }
 
-.secondary-btn {
-  border: 1px solid #2F7D64;
-  color: #2F7D64;
-  padding: 0.75rem 1.75rem;
-  border-radius: 9999px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.secondary-btn:hover {
-  background: rgba(47, 125, 100, 0.08);
-}
-
+ 
 /* =========================
    DESKTOP CONTACT BUTTONS
 ========================= */
@@ -104,8 +138,8 @@ body {
 }
 
 .email-btn {
-  border: 1px solid #2F7D64;
-  color: #2F7D64;
+  border: 1px solid #ffffff;
+  color: #cccfce;
 }
 
 .email-btn:hover {
@@ -114,12 +148,12 @@ body {
 }
 
 .whatsapp-btn {
-  background: #2F7D64;
+  background: #eff3f2;
   color: #ffffff;
 }
 
 .whatsapp-btn:hover {
-  background: #256B55;
+  background: #fcfffe;
 }
 
 /* =========================
@@ -135,8 +169,7 @@ body {
   justify-content: center;
   background: rgba(47, 125, 100, 0.1);
   font-size: 0.95rem;
-  color: #2F7D64;
-  transition: background 0.2s ease;
+  color: #e9e9e9; 
 }
 
 .icon-btn:hover {
@@ -288,7 +321,7 @@ body {
 .service-card h3 {
   margin-top: 1rem;
   font-weight: 600;
-  color: #2F7D64;
+  color: #350f7a;
 }
 
 .service-card p {
@@ -347,4 +380,4 @@ body {
 .collection-slide img {
   width: 100%; 
   object-fit: cover;
-} 
+}  

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeCare24</title>
+    <!-- Premium medical-style fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-[#F6FBF9] text-gray-800">
+
+    <!-- COMPONENT MOUNTS -->
+    <div id="navbar"></div>
+    <div id="hero"></div>
+    <section class="collection-carousel">
+  <div class="collection-track">
+    <div class="collection-slide">
+      <img src="../images/hc1.png" alt="Home Care Service">
+    </div>
+    <div class="collection-slide">
+      <img src="../images/hc2.png" alt="Nursing Care">
+    </div>
+    <div class="collection-slide">
+      <img src="../images/hc3.png" alt="Elder Care">
+    </div>
+  </div>
+</section>
+    <div id="scope"></div>
+    <div id="carousel"></div>
+    <div id="contactme"></div>
+    <div id="footer"></div>
+    <!-- JS -->
+    <script src="js/main.js"></script>
+
+</body>
+
+    <script>
+  const track = document.querySelector(".collection-track");
+  const slides = document.querySelectorAll(".collection-slide");
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 8000);
+</script>
+
+</script>
+
+
+</html>

@@ -1,64 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HomeCare24</title>
-    <!-- Premium medical-style fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
-        rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Nurses, Patient Attendants, Physiotherapy & Elder Care</title>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body class="bg-[#F6FBF9] text-gray-800">
+<body class="bg-white text-gray-800 leading-relaxed">
 
-    <!-- COMPONENT MOUNTS -->
-    <div id="navbar"></div>
-    <div id="hero"></div>
-    <section class="collection-carousel">
-  <div class="collection-track">
-    <div class="collection-slide">
-      <img src="../images/hc1.png" alt="Home Care Service">
+<!-- ================= HEADER ================= -->
+<header class="w-full headers rounded-b-[40px]">
+  <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <!-- LEFT LOGO -->
+    <div class="flex items-center text-white font-black size-xl">
+      HOME CARE 24
     </div>
-    <div class="collection-slide">
-      <img src="../images/hc2.png" alt="Nursing Care">
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden lg:flex items-center gap-8 text-white text-sm font-medium">
+      <li><a href="#" class="nav-link">About Us</a></li>
+      <li><a href="#" class="nav-link flex items-center gap-1">Services <i class="fa-solid fa-chevron-down text-xs"></i></a></li>
+      <li><a href="#" class="nav-link">Blogs</a></li>
+      <li><a href="#" class="nav-link">Book Now</a></li>
+    </ul>
+
+    <!-- RIGHT ACTIONS -->
+    <div class="hidden lg:flex items-center gap-4">
+      <span class="text-white text-sm">Call Us - <strong>+91 8788546213</strong></span>
+
+      <!-- EMAIL -->
+      <a href="mailto:info@care24.co.in" class="icon-btn email-btn">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+
+      <!-- WHATSAPP -->
+      <a href="https://wa.me/918788546213" target="_blank" class="icon-btn whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
     </div>
-    <div class="collection-slide">
-      <img src="../images/hc3.png" alt="Elder Care">
+
+    <!-- MOBILE MENU BUTTON -->
+    <button id="menuBtn" class="lg:hidden text-white text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-[#0c2d5a] px-6 pb-6">
+    <ul class="flex flex-col gap-4 text-white text-sm">
+      <li><a href="#" class="mobile-link">About Us</a></li>
+      <li><a href="#" class="mobile-link">Services</a></li>
+      <li><a href="#" class="mobile-link">Blogs</a></li>
+      <li><a href="#" class="mobile-link">Book Now</a></li>
+
+      <div class="flex items-center gap-4 pt-4">
+        <a href="mailto:info@care24.co.in" class="icon-btn email-btn">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/918788546213" target="_blank" class="icon-btn whatsapp-btn">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+      </div>
+    </ul>
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero-wrapper relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-text space-y-6 relative z-10">
+      <h1 class="hero-heading">
+        Largest Home<br>
+        Healthcare Service<br>
+        Provider In<br>
+        <span>Navi Mumbai</span>
+      </h1>
+
+      <p class="hero-subtext">
+        Your health & wellness, our priority. Experience personal
+        care & support with Care24.
+      </p>
+
+      <button class="hero-btn">
+        <a href="tel:918788546213">Request a callback </a>
+      </button>
+
+      <!-- RATINGS -->
+      <div class="flex items-center gap-6 mt-6 text-sm  w-[300px] ">
+        <img src="./images/hc1.png" alt=""  >
+    </div>
+    </div>
+
+    <!-- RIGHT IMAGE PLACEHOLDER -->
+    <div class="hero-image-wrapper relative">
+  <div class="hero-image-box relative overflow-hidden">
+    <img 
+      src="./images/hero.jpeg"
+      alt="Home Care Service"
+      class="hero-img"
+    /> 
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- DOT PATTERNS -->
+  <div class="dots-left"></div>
+  <div class="dots-right"></div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="bg-[#350f7a05] py-20">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <h3 class="section-title text-center mb-14">
+      Caregiver Responsibilities
+    </h3>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- DO'S -->
+      <div class="care-card do-card">
+        <div class="card-header">
+          <span class="icon">👍</span>
+          <h4>Do’s</h4>
+        </div>
+
+        <ul class="care-list">
+          <li>Oral feeding</li>
+          <li>Wash the patient’s clothes</li>
+          <li>Wash clothes using a washing machine</li>
+          <li>Oral medication assistance</li>
+          <li>Assist in patient’s daily activities</li>
+          <li>Light massage (10–15 minutes)</li>
+          <li>Maintain cleanliness in patient’s room & washroom</li>
+          <li>Prepare basic food for the patient</li>
+        </ul>
+      </div>
+
+      <!-- DON'TS -->
+      <div class="care-card dont-card">
+        <div class="card-header">
+          <span class="icon">🚫</span>
+          <h4>Don’ts</h4>
+        </div>
+
+        <ul class="care-list">
+          <li>Ryles or IV tube feeding</li>
+          <li>Wash family’s clothes</li>
+          <li>Wash clothes by hand</li>
+          <li>Injections or surgical procedures</li>
+          <li>Domestic household work</li>
+          <li>Full body massage</li>
+          <li>Cleaning entire house or other washrooms</li>
+          <li>Prepare food for family members</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
-    <div id="scope"></div>
-    <div id="carousel"></div>
-    <div id="contactme"></div>
-    <div id="footer"></div>
-    <!-- JS -->
-    <script src="js/main.js"></script>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <h3 class="section-title text-center mb-14">
+      Why Choose HomeCare24
+    </h3>
+
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
+
+      <div class="why-card">
+        <h4> ✔ &nbsp; Flexible Care Plans</h4>
+        <p>
+          Choose from 6 hours, 12 hours, or 24 hours of home healthcare services
+          based on your specific needs and schedule.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp; Verified & Trained Caregivers</h4>
+        <p>
+          All caregivers undergo strict background verification, medical screening,
+          and professional training.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Personalized Care Approach</h4>
+        <p>
+          Care plans are customized to suit each patient’s medical condition,
+          lifestyle, and recovery goals.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Quick Replacement Guarantee</h4>
+        <p>
+          In case of dissatisfaction or emergency, we ensure a caregiver
+          replacement within 24 hours.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Transparent Pricing</h4>
+        <p>
+          No hidden charges. Clear pricing with detailed service breakdowns
+          shared upfront.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Dedicated Care Coordinator</h4>
+        <p>
+          A single point of contact is assigned to monitor care quality and
+          assist you throughout the service period.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Medical Supervision</h4>
+        <p>
+          Services are delivered under professional medical guidance to ensure
+          patient safety and care standards.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Emergency Support</h4>
+        <p>
+          Our support team is available to assist you during emergencies or
+          urgent care requirements.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Hygiene & Safety Protocols</h4>
+        <p>
+          Strict hygiene practices and safety measures are followed at all times
+          to protect patients and families.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <h4>✔ &nbsp;Trusted by Families</h4>
+        <p>
+          Trusted by thousands of families across cities for reliable and
+          compassionate home healthcare services.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- form-->
+ <section class="callback-section py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+    <!-- LEFT IMAGE -->
+    <div class="callback-image flex justify-center">
+      <img 
+        src="./images/form.png" 
+        alt="Care Team"
+        class="max-w-md w-full object-contain"
+      >
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="callback-form bg-gray-50 rounded-2xl p-10 shadow-sm">
+      <h2 class="text-2xl font-semibold text-[#0c2d5a] mb-6">
+        Request a Callback
+      </h2>
+
+      <form class="space-y-6">
+        <!-- Name -->
+        <div class="form-group">
+          <label>Name<span>*</span></label>
+          <input type="text" placeholder="Your Name" required>
+        </div>
+
+        <!-- Phone -->
+        <div class="form-group">
+          <label>Phone<span>*</span></label>
+          <input type="tel" placeholder="Enter Phone Number" required>
+        </div>
+
+        <!-- City -->
+        <div class="form-group">
+          <label>Select Your City<span>*</span></label>
+          <select required>
+            <option value="">-- Select City --</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+          </select>
+        </div>
+
+        <!-- Requirement -->
+        <div class="form-group">
+          <label>Requirement<span>*</span></label>
+          <select required>
+            <option value="">-- Select Service --</option>
+            <option>Nursing Care</option>
+            <option>Elderly Care</option>
+            <option>Physiotherapy</option>
+            <option>Baby Care</option>
+          </select>
+        </div>
+
+        <!-- Button -->
+        <button type="submit" class="callback-btn">
+          Request a Callback
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+<!--bs image-->
+<section class="single-image-section">
+  <div class="image-wrapper flex align-center justify-center">
+    <img 
+      src="./images/bsimg.jpg" 
+      alt="Home Care Services"
+      class="responsive-image"
+    >
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-container">
+
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What will be the work profile of the caretaker?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          The caretaker assists with daily activities such as bathing, grooming,
+          feeding, mobility support, medication reminders, and basic health
+          monitoring. Responsibilities are customized based on patient needs.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How can we verify that the caregiver is from Care24?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          All caregivers carry a verified Care24 ID card and wear professional
+          uniforms. Caregiver details are shared with the family before service
+          begins.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Are the caregivers trained and background verified?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes. All caregivers undergo background checks, medical screening, and
+          structured training before deployment. Continuous assessments ensure
+          service quality.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How and when can I request a replacement?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Replacement requests are processed immediately. In most cases, a new
+          caregiver is arranged within 24 hours, depending on availability.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can I meet or speak with the caregiver before confirmation?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes, you may interact with the caregiver either in person or via call
+          before confirming the service to ensure comfort and compatibility.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What kind of support is available after service starts?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Dedicated care coordinators remain available throughout the service
+          period. You can reach support for feedback, emergencies, or assistance
+          at any time.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is Care24 available in multiple cities?</span>
+        <span class="icon">+</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes, Care24 services are available across major cities including Mumbai,
+          Delhi, and surrounding regions. Availability may vary by service type.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ 
+<div id="contactme"></div>
+
+<!-- ================= FOOTER ================= -->
+  <div id="footer"></div> 
 
 </body>
+<script> 
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    <script>
-  const track = document.querySelector(".collection-track");
-  const slides = document.querySelectorAll(".collection-slide");
-  let index = 0;
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  }); 
 
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }, 8000);
+  async function loadComponent(id, file) {
+  const res = await fetch(file);
+  document.getElementById(id).innerHTML = await res.text();
+}
+loadComponent("contactme", "html/contact-me.html");
+loadComponent("footer","/html/footer.html");
+ 
+  document.addEventListener("click", function (e) {
+    const question = e.target.closest(".faq-question");
+    if (!question) return;
+
+    const item = question.closest(".faq-item");
+    item.classList.toggle("active");
+  }); 
+
+
 </script>
-
-</script>
-
-
 </html>

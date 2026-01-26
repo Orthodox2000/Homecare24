@@ -1,33 +1,5 @@
-<section class="collection-carousel">
-  <div class="collection-track">
-    <div class="collection-slide">
-      <img src="../images/hc1.png" alt="Home Care Service">
-    </div>
-    <div class="collection-slide">
-      <img src="../images/hc2.png" alt="Nursing Care">
-    </div>
-    <div class="collection-slide">
-      <img src="../images/hc1.png" alt="Elder Care">
-    </div>
-  </div>
-</section>
 
- <script> 
-function initCollectionCarousel() {
-  const track = document.querySelector(".collection-track");
-  const slides = document.querySelectorAll(".collection-slide");
 
-  if (!track || slides.length === 0) return;
-
-  let index = 0;
-
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-  }, 3000);
-}
-
-</script>
 
 <head>
     <style> 
