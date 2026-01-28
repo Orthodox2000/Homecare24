@@ -28,4 +28,20 @@ document.addEventListener("click", (e) => {
   if (e.target.id === "menuBtn") {
     document.getElementById("mobileMenu").classList.toggle("hidden");
   }
-});
+}); 
+  function toggleService(button) {
+    const item = button.parentElement
+    const content = item.querySelector(".service-content")
+
+    item.classList.toggle("open")
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px"
+    }
+  } 
+
+ 
+ 
+

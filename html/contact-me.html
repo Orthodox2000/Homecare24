@@ -3,25 +3,25 @@
 
     <!-- Top Info Strip -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-
+      <!-- Top Info Strip -->
       <div class="shine-card contact-info">
         <span class="contact-icon">📍</span>
         <div>
           <h4>Address</h4>
           <p>
-            E4 <br>
+            108, Mittal Enclave Shopping Center, Naigaon,<br> East Maharashtra, 401207
           </p>
         </div>
       </div>
-
       <div class="shine-card contact-info ">
         <span class="contact-icon  ">📞</span>
         <div>
           <h4>Phone</h4>
           <p>+91 87885 46213</p>
-          <a href="tel:918788546213"><input type="button" value="Call Now !" class="primary-btn mt-2 w-full"></a>
+          <a href="tel:918788546213"><input type="button" value="Call Now !"
+              class="primary-btn bg-blue-500 mt-2 w-full"></a>
         </div>
-        
+
       </div>
 
       <div class="shine-card contact-info">
@@ -29,9 +29,10 @@
         <div>
           <h4>Email</h4>
           <p>homecare24@gmail.com</p>
-          <a href="mailto:homecare24@gmail.co"><input type="button" value="Send Email" class="primary-btn mt-2 w-full"></a>
+          <a href="mailto:homecare24@gmail.co"><input type="button" value="Send Email"
+              class="primary-btn bg-blue-500  mt-2 w-full"></a>
         </div>
-      
+
       </div>
 
     </div>
@@ -45,29 +46,58 @@
           Book Your Appointment
         </h3>
 
-        <form class="space-y-4">
-          <input type="text" placeholder="Your Name" class="contact-input">
-          <input type="email" placeholder="Your Email" class="contact-input">
-          <input type="tel" placeholder="Your Phone Number" class="contact-input">
-          <textarea rows="4" placeholder="Your Message" class="contact-input"></textarea>
+        
+        <form id="callbackForm" class="space-y-6" onsubmit="handleCallbackSubmit()">
+  <div class="form-group">
+    <label>Name<span>*</span></label>
+    <input type="text" name="name" id="name" required />
+  </div>
 
-          <button type="submit" class="primary-btn mt-4">
-            Send Request
-          </button>
-        </form>
+  <div class="form-group">
+    <label>Phone<span>*</span></label>
+    <input type="tel" name="phone" id="phone" required />
+  </div>
+
+  <div class="form-group">
+    <label>Select Your City<span>*</span></label>
+    <select name="city" id="city" required>
+      <option value="asd">-- Select City --</option>
+      <option id="city" value="m">Mumbai</option>
+      <option id="city" value="nm">Navi Mumbai</option>
+      <option id="city" value="o">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Requirement<span>*</span></label>
+    <select name="requirement" id="requirement" required>
+      <option value="asd"id="requirement">-- Select Service --</option>
+      <option id="requirement" value="nc">Nursing Care</option>
+      <option id="requirement" value="ec">Elderly Care</option>
+      <option id="requirement" value="pt">Physiotherapy</option>
+      <option id="requirement" value="bc">Baby Care</option>
+    </select>
+  </div>
+
+  <button type="submit" class="callback-btn">
+    Request a Callback
+  </button>
+</form>
       </div>
+
 
       <!-- Map -->
       <div class="shine-card overflow-hidden rounded-2xl border border-gray-100">
         <iframe
-          class="w-full h-full min-h-[380px]"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Mira+Road+Bharti+Garden&output=embed">
-        </iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9485.0018199161!2d72.83831240656741!3d19.363737230056987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aefef5cf5d89%3A0x839bcb38fb569d!2sMittal%20Shopping%20Centre%20Complex!5e0!3m2!1sen!2sin!4v1769606209549!5m2!1sen!2sin"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
     </div>
 
   </div>
 </section>
+<script>
+
+</script>

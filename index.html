@@ -18,8 +18,8 @@
 <body class="bg-white text-gray-800 leading-relaxed">
 
 <!-- ================= HEADER ================= -->
-<header class="w-full headers rounded-b-[40px]">
-  <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+<header class="w-full headers rounded-b-[40px]" id="headers">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between flex-column">
 
     <!-- LEFT LOGO -->
     <div class="flex items-center text-white font-black size-xl">
@@ -28,25 +28,28 @@
 
     <!-- DESKTOP MENU -->
     <ul class="hidden lg:flex items-center gap-8 text-white text-sm font-medium">
-      <li><a href="#" class="nav-link">About Us</a></li>
-      <li><a href="#" class="nav-link flex items-center gap-1">Services <i class="fa-solid fa-chevron-down text-xs"></i></a></li>
-      <li><a href="#" class="nav-link">Blogs</a></li>
-      <li><a href="#" class="nav-link">Book Now</a></li>
+      <li><a href="#herosec" class="nav-link">Home</a></li>
+      <li><a href="#serviceaval" class="nav-link flex items-center gap-1">Services</a></li>
+      <li><a href="#consec" class="nav-link">Contact</a></li>
+      <li><a href="#faqsec" class="nav-link">FAQs</a></li>
+      <li><a href="https://homecare24-api.vercel.app/" class="nav-link">Admin</a></li>
     </ul>
 
     <!-- RIGHT ACTIONS -->
-    <div class="hidden lg:flex items-center gap-4">
-      <span class="text-white text-sm">Call Us - <strong>+91 8788546213</strong></span>
+    <div class=" hidden lg:flex items-center gap-4">
+      <span class="hidden text-white text-sm">Call Us - <strong>+91 8788546213</strong></span>
 
       <!-- EMAIL -->
-      <a href="mailto:info@care24.co.in" class="icon-btn email-btn">
+      <a href="mailto:info@care24.co.in" class=" email-btn">
         <i class="fa-solid fa-envelope"></i>
       </a>
 
       <!-- WHATSAPP -->
-      <a href="https://wa.me/918788546213" target="_blank" class="icon-btn whatsapp-btn">
-        <i class="fa-brands fa-whatsapp"></i>
+       <div class="whatsapp-btn ">
+      <a href="https://wa.me/918788546213" target="_blank" >
+        <i class="fa-brands fa-whatsapp"></i>&nbsp;Whatsapp
       </a>
+      </div>
     </div>
 
     <!-- MOBILE MENU BUTTON -->
@@ -59,10 +62,11 @@
   <!-- MOBILE MENU -->
   <div id="mobileMenu" class="hidden lg:hidden bg-[#0c2d5a] px-6 pb-6">
     <ul class="flex flex-col gap-4 text-white text-sm">
-      <li><a href="#" class="mobile-link">About Us</a></li>
-      <li><a href="#" class="mobile-link">Services</a></li>
-      <li><a href="#" class="mobile-link">Blogs</a></li>
-      <li><a href="#" class="mobile-link">Book Now</a></li>
+      <li><a href="#herosec" class="mobile-link">About Us</a></li>
+      <li><a href="#serviceaval" class="mobile-link">Services</a></li>
+      <li><a href="#consec" class="mobile-link">Contact</a></li>
+      <li><a href="#faqsec" class="mobile-link">FAQs</a></li>
+      <li><a href="https://homecare24-api.vercel.app/" class="mobile-link">Login</a></li>
 
       <div class="flex items-center gap-4 pt-4">
         <a href="mailto:info@care24.co.in" class="icon-btn email-btn">
@@ -79,36 +83,33 @@
 
 <!-- ================= HERO ================= -->
 
-<section class="hero-wrapper relative overflow-hidden">
-  <div class="max-w-5xl mx-auto px-6 py-16 grid lg:grid-cols-2 gap-10 items-center">
+<section class="hero-wrapper relative overflow-hidden" id="herosec">
+  <div class="max-w-5xl mx-auto px-6 py-16 flex hero-bx items-center">
 
     <!-- LEFT CONTENT -->
-    <div class="hero-text space-y-6 relative z-10">
+    <div class="hero-text space-y-6 relative flex items-evenly flex-col z-10">
       <h1 class="hero-heading">
-        Largest Home<br>
-        Healthcare Service<br>
-        Provider In<br>
+        Largest Home Care Service
+        Provider In
         <span>Navi Mumbai</span>
-      </h1>
-
+      </h1> 
       <p class="hero-subtext">
         Your health & wellness, our priority. Experience personal
-        care & support with Care24.
-      </p>
-
-      <button class="hero-btn">
-        <a href="tel:918788546213">Request a callback </a>
+        care & support with HomeCare24.
+      </p> 
+      <button class="hero-btn w-1/2">
+        <a href="tel:918788546213">Let's Start Request a callback </a>
       </button>
 
       <!-- RATINGS -->
-      <div class="flex items-center gap-6 mt-6 text-sm  w-[300px] ">
+      <div class="flex items-center gap-1 mt-4 text-sm  w-[350px] ">
         <img src="./images/hc1.png" alt=""  >
     </div>
     </div>
 
     <!-- RIGHT IMAGE PLACEHOLDER -->
-    <div class="hero-image-wrapper relative">
-  <div class="hero-image-box relative overflow-hidden">
+    <div class="hero-image-wrapper relative min-w-1/3 ">
+  <div class="hero-image-box relative overflow-hidden ">
     <img 
       src="./images/hero.jpeg"
       alt="Home Care Service"
@@ -126,11 +127,54 @@
 
 </section>
 
+<!-- ================= Savailabe schemes ================= -->
+ <section class="bg-white " >
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Tabs -->
+    <div class="flex flex-wrap gap-6 justify-center mb-12 text-lg"id="serviceaval">
+      <button onclick="switchTab('caregiver', this)" class="tab-btn">Caregiver / Elderly Care</button>
+      <button onclick="switchTab('nurse', this)" class="tab-btn">Nurse</button>
+      <button onclick="switchTab('physio', this)" class="tab-btn">Physiotherapy</button>
+      <button onclick="switchTab('baby', this)" class="tab-btn active-tab">Baby Care</button>
+    </div>
+
+    <!-- Content -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Left -->
+      <div id="content-box" class="animate-fade">
+        <h2 id="service-title" class="text-3xl font-semibold mb-4"></h2>
+
+        <p id="service-desc" class="text-gray-600 mb-6 max-w-lg"></p>
+
+        <ul id="service-list" class="space-y-2 text-gray-700 mb-8"></ul>
+          <a href="#contactForm">
+        <button class="bg-[#F4A000] hover:bg-[#d89000] text-white px-8 py-3 rounded-full font-medium transition">
+          Book now & save up to 20%!
+        </button></a>
+      </div>
+
+      <!-- Right -->
+      <div id="image-box" class="animate-fade">
+        <img
+          id="content-image"
+          src="images/bsimg.jpg"
+          class="rounded-2xl shadow-lg w-full max-h-[420px] object-cover"
+          alt="service"
+        />
+      </div>
+
+    </div>
+
+  </div> 
+
+
 <!-- ================= SERVICES ================= -->
-<section class="bg-[#350f7a05] py-20">
+<section class="bg-[#350f7a05] py-20" >
   <div class="max-w-6xl mx-auto px-4">
 
-    <h3 class="section-title text-center mb-14">
+    <h3 class="section-title text-center mb-14 text-blue-900">
       Caregiver Responsibilities
     </h3>
 
@@ -182,13 +226,13 @@
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4">
 
-    <h3 class="section-title text-center mb-14">
+    <h3 class="section-title text-center mb-14 text-blue-900">
       Why Choose HomeCare24
     </h3>
 
     <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4> ✔ &nbsp; Flexible Care Plans</h4>
         <p>
           Choose from 6 hours, 12 hours, or 24 hours of home healthcare services
@@ -196,7 +240,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp; Verified & Trained Caregivers</h4>
         <p>
           All caregivers undergo strict background verification, medical screening,
@@ -204,7 +248,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Personalized Care Approach</h4>
         <p>
           Care plans are customized to suit each patient’s medical condition,
@@ -212,7 +256,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Quick Replacement Guarantee</h4>
         <p>
           In case of dissatisfaction or emergency, we ensure a caregiver
@@ -220,7 +264,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Transparent Pricing</h4>
         <p>
           No hidden charges. Clear pricing with detailed service breakdowns
@@ -228,23 +272,15 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Dedicated Care Coordinator</h4>
         <p>
           A single point of contact is assigned to monitor care quality and
           assist you throughout the service period.
         </p>
-      </div>
+      </div> 
 
-      <div class="why-card">
-        <h4>✔ &nbsp;Medical Supervision</h4>
-        <p>
-          Services are delivered under professional medical guidance to ensure
-          patient safety and care standards.
-        </p>
-      </div>
-
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Emergency Support</h4>
         <p>
           Our support team is available to assist you during emergencies or
@@ -252,7 +288,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Hygiene & Safety Protocols</h4>
         <p>
           Strict hygiene practices and safety measures are followed at all times
@@ -260,7 +296,7 @@
         </p>
       </div>
 
-      <div class="why-card">
+      <div class="why-card shine-card">
         <h4>✔ &nbsp;Trusted by Families</h4>
         <p>
           Trusted by thousands of families across cities for reliable and
@@ -274,15 +310,15 @@
 
 
 <!-- form-->
- <section class="callback-section py-20 bg-white">
+ <section class="callback-section py-20 bg-white" id="consec">
   <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
 
     <!-- LEFT IMAGE -->
-    <div class="callback-image flex justify-center">
+    <div class="callback-image flex justify-center ">
       <img 
         src="./images/form.png" 
         alt="Care Team"
-        class="max-w-md w-full object-contain"
+        class="max-w-md w-full object-contain "
       >
     </div>
 
@@ -291,47 +327,22 @@
       <h2 class="text-2xl font-semibold text-[#0c2d5a] mb-6">
         Request a Callback
       </h2>
+<form id="contactForm" class="space-y-4" onsubmit="handleContactSubmit(event)">
+          <input type="text" name="name" placeholder="Your Name" class="contact-input" required />
 
-      <form class="space-y-6">
-        <!-- Name -->
-        <div class="form-group">
-          <label>Name<span>*</span></label>
-          <input type="text" placeholder="Your Name" required>
-        </div>
+          <input type="email" name="email" placeholder="Your Email" class="contact-input" required />
 
-        <!-- Phone -->
-        <div class="form-group">
-          <label>Phone<span>*</span></label>
-          <input type="tel" placeholder="Enter Phone Number" required>
-        </div>
+          <input type="tel" name="phone" placeholder="Your Phone Number" class="contact-input" required />
 
-        <!-- City -->
-        <div class="form-group">
-          <label>Select Your City<span>*</span></label>
-          <select required>
-            <option value="">-- Select City --</option>
-            <option>Mumbai</option>
-            <option>Delhi</option>
-          </select>
-        </div>
+          <textarea name="message" rows="4" placeholder="Your Message" class="contact-input"></textarea>
 
-        <!-- Requirement -->
-        <div class="form-group">
-          <label>Requirement<span>*</span></label>
-          <select required>
-            <option value="">-- Select Service --</option>
-            <option>Nursing Care</option>
-            <option>Elderly Care</option>
-            <option>Physiotherapy</option>
-            <option>Baby Care</option>
-          </select>
-        </div>
+          <button type="submit" class="primary-btn bg-blue-500 mt-4">
+            Send Request
+          </button>
+        </form>
+        
+        <p id="formResponse"></p>
 
-        <!-- Button -->
-        <button type="submit" class="callback-btn">
-          Request a Callback
-        </button>
-      </form>
     </div>
 
   </div>
@@ -347,7 +358,7 @@
   </div>
 </section>
 
-<section class="faq-section">
+<section class="faq-section" id="faqsec">
   <div class="faq-container">
 
     <h2 class="faq-title">Frequently Asked Questions</h2>
@@ -369,12 +380,12 @@
 
     <div class="faq-item">
       <div class="faq-question">
-        <span>How can we verify that the caregiver is from Care24?</span>
+        <span>How can we verify that the caregiver is from HealthCare24?</span>
         <span class="icon">+</span>
       </div>
       <div class="faq-answer">
         <p>
-          All caregivers carry a verified Care24 ID card and wear professional
+          All caregivers carry a verified HealthCare24 ID card and wear professional
           uniforms. Caregiver details are shared with the family before service
           begins.
         </p>
@@ -442,8 +453,8 @@
       </div>
       <div class="faq-answer">
         <p>
-          Yes, Care24 services are available across major cities including Mumbai,
-          Delhi, and surrounding regions. Availability may vary by service type.
+          Yes, HealthCare24 services are available across major cities including Mumbai,
+          Navi Mumbai , Thane , and surrounding regions. Availability may vary by service type.
         </p>
       </div>
     </div>
@@ -452,8 +463,13 @@
 </section>
 
 
+<!-- WhatsApp Sticky Icon -->
+ <div class="whatsapp-float">
+  <a href="https://wa.me/918788546213" target="_blank"  title="Chat with us on WhatsApp">
+   <img src="images/whatsapp.png" alt="WhatsApp" />
+</a>
+ </div>
 
- 
 <div id="contactme"></div>
 
 <!-- ================= FOOTER ================= -->
@@ -482,7 +498,155 @@ loadComponent("footer","/html/footer.html");
     const item = question.closest(".faq-item");
     item.classList.toggle("active");
   }); 
+const services = {
+    baby: {
+      title: '<span class="text-blue-900">Experienced</span> <span class="italic text-blue-500">Baby Sitter and Nanny</span>',
+      desc: 'Care24 has caring and experienced baby sitters who are experts in taking care of Baby.',
+      image: 'images/baby.png',
+      list: [
+        'Bathing and dressing',
+        'Children’s laundry',
+        'Changing diapers and potty-training*',
+        'Organizing bedrooms / toys'
+      ]
+    },
+    nurse: {
+      title: '<span class="text-blue-900">Certified</span> <span class="italic text-blue-500">Home Nurses</span>',
+      desc: 'Professional nurses providing medical care at home.',
+      image: 'images/nurses.png',
+      list: [
+        'Injection & IV administration',
+        'Wound & post-surgical care',
+        'ICU & critical patient care',
+        'Medication monitoring'
+      ]
+    },
+    caregiver: {
+      title: '<span class="text-blue-900">Trusted</span> <span class="italic text-blue-500">Caregiver & Elderly Care</span>',
+      desc: 'Compassionate caregivers for seniors and dependent patients.',
+      image: 'images/caregiver.png',
+      list: [
+        'Daily activity assistance',
+        'Personal hygiene support',
+        'Mobility & companionship',
+        'Feeding & monitoring'
+      ]
+    },
+    physio: {
+      title: '<span class="text-blue-900">Expert</span> <span class="italic text-blue-500">Physiotherapy at Home</span>',
+      desc: 'Recover faster with professional physiotherapy at home.',
+      image: 'images/physio.jpg',
+      list: [
+        'Post-surgery rehab',
+        'Pain management',
+        'Stroke recovery',
+        'Strength & mobility therapy'
+      ]
+    }
+  }
 
+  function switchTab(type, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'))
+    btn.classList.add('active-tab')
 
+    const data = services[type]
+
+    const box = document.getElementById('content-box')
+    const imgBox = document.getElementById('image-box')
+
+    box.classList.remove('animate-fade')
+    imgBox.classList.remove('animate-fade')
+    void box.offsetWidth
+
+    document.getElementById('service-title').innerHTML = data.title
+    document.getElementById('service-desc').innerText = data.desc
+
+    const ul = document.getElementById('service-list')
+    ul.innerHTML = ''
+    data.list.forEach(item => {
+      ul.innerHTML += `<li>✓ ${item}</li>`
+    })
+
+    document.getElementById('content-image').src = data.image
+
+    box.classList.add('animate-fade')
+    imgBox.classList.add('animate-fade')
+  }
+
+  window.onload = () => {
+    switchTab('baby', document.querySelector('.active-tab'))
+  }
+
+   document
+      .getElementById("contactForm")
+      .addEventListener("submit", handleContactSubmit);
+//formsub
+  function handleContactSubmit(e) {
+    e.preventDefault(); 
+    const form = e.target;
+    const responseBox = document.getElementById("formResponse");
+
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    responseBox.textContent = "Sending...";
+    responseBox.style.color = "#555"; 
+    fetch("https://homecare24-api.vercel.app/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          responseBox.textContent = data.message;
+          responseBox.style.color = "green";
+          form.reset();
+        } else {
+          responseBox.textContent = data.message || "Submission failed";
+          responseBox.style.color = "red";
+        }
+      })
+      .catch(() => {
+        responseBox.textContent = "Server error. Please try again.";
+        responseBox.style.color = "red";
+      });
+  }
+
+  //callback 
+  
+   document
+      .getElementById("callbackForm")
+      .addEventListener("submit", handleCallbackSubmit);
+async function handleCallbackSubmit(e) {
+  e.preventDefault();
+  const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+  console.log("asd");
+  try {
+    const res = await fetch("http://localhost:3000/api/callback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+ 
+  } catch (err) {
+    console.error(err);
+    alert("⚠️ Server error");
+  }
+}
 </script>
 </html>
